@@ -1,0 +1,100 @@
+.carouselContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    position: relative;
+  }
+  
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .imageWrapper:hover img {
+    transform: scale(1.05);
+  }
+  
+  .progressIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .progressIndicator {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+  }
+  
+  .progressCircle {
+    transform: rotate(-90deg);
+    transition: stroke 0.3s ease;
+  }
+  
+  .progressIndicator.active .progressCircle {
+    stroke: var(--primary);
+  }
+  
+  @media (max-width: 1024px) {
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      gap: 0;
+    }
+  
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .imageWrapper {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      padding: 0 0.5rem;
+    }
+  
+    .imageWrapper:first-child {
+      padding-left: 0;
+    }
+  
+    .imageWrapper:last-child {
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carouselContainer {
+      margin: 2rem auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carouselContainer {
+      margin: 1.5rem auto;
+      padding: 0 0.5rem;
+    }
+  
+    .progressIndicator {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }

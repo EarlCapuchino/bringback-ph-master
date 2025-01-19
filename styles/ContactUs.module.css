@@ -1,0 +1,233 @@
+.main {
+  margin-top: 4rem;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+    font-family: var(--font-lato), sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.mainTitle {
+   text-align: center;
+  margin-bottom: 1.5rem;
+     color: var(--primary-dark)
+}
+.mainContent {
+   text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+   color: #555
+}
+.contactWrapper {
+    display: flex;
+    flex-wrap: wrap;
+  gap: 2rem;
+}
+.contactForm {
+   flex: 1 1 600px;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+     border-radius: 0.5rem;
+    background-color: white;
+}
+.contactInfo {
+    flex: 1 1 300px;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+     border-radius: 0.5rem;
+    background-color: white;
+}
+.contactTitle {
+    margin-bottom: 1.5rem;
+     color: var(--primary-dark);
+}
+.infoGroup {
+    margin-bottom: 1.5rem;
+}
+.infoTitle {
+     font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+  gap: 1.25rem;
+
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.formLabel {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #555;
+}
+.required {
+   color: #dc3545;
+   margin-left: 0.25rem;
+}
+.formInput {
+   padding: 0.75rem;
+   border: 1px solid #ddd;
+  border-radius: 0.25rem;
+   font-size: 1rem;
+  resize: vertical;
+  min-height: 40px;
+   font-family: var(--font-lato), sans-serif;
+}
+.formInput:focus {
+     outline: 2px solid var(--primary);
+ }
+.submitButton {
+    background-color: var(--primary);
+    color: white;
+   padding: 0.75rem 1.5rem;
+   border: none;
+   border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  align-self: flex-start;
+
+}
+
+.submitButton:hover {
+    background-color: var(--primary-dark);
+}
+
+.errorText {
+    color: #dc3545;
+     font-size: 0.875rem;
+     margin-top: 0.25rem;
+ }
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+     width: 100%;
+     height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+  display: flex;
+ justify-content: center;
+    align-items: center;
+}
+.modalContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+ text-align: center;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.2)
+}
+.closeModalButton {
+   background-color: var(--primary);
+    color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+   border-radius: 0.25rem;
+  font-size: 1rem;
+ cursor: pointer;
+   transition: all 0.3s ease;
+      margin-top: 1rem;
+
+}
+.closeModalButton:hover {
+   background-color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .contactWrapper {
+     gap: 1.5rem;
+ }
+
+ .contactForm,
+  .contactInfo {
+       padding: 1rem;
+   }
+  .mainTitle {
+        font-size: 2rem;
+      margin-bottom: 1rem;
+ }
+    .mainContent{
+         font-size: 1rem;
+    margin-bottom: 1.5rem;
+    }
+      .contactTitle{
+      font-size: 1.25rem;
+           margin-bottom: 1rem;
+    }
+    .infoTitle {
+        font-size: 1rem;
+    margin-bottom: 0.35rem;
+  }
+   .formLabel {
+            font-size: 0.9rem;
+        }
+  .formInput,
+  .submitButton,
+     .closeModalButton {
+        font-size: 0.875rem;
+    }
+     .modalContent{
+         padding: 1.5rem
+     }
+}
+
+@media (max-width: 480px) {
+     .container {
+        padding: 1rem 0.5rem;
+    }
+
+    .contactWrapper {
+       gap: 1rem;
+    }
+    .contactForm,
+    .contactInfo {
+        padding: 0.75rem;
+    }
+    .mainTitle {
+         font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+   }
+    .mainContent{
+         font-size: 0.875rem;
+       margin-bottom: 1rem;
+    }
+     .contactTitle{
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+     }
+    .infoTitle {
+         font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+   }
+     .formLabel {
+            font-size: 0.875rem;
+        }
+    .formInput,
+    .submitButton,
+         .closeModalButton {
+        font-size: 0.75rem;
+    }
+    .modalContent{
+        padding: 1rem
+   }
+}

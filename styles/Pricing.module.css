@@ -1,0 +1,236 @@
+.main {
+    margin-top: 4rem;
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  
+  .section h1 {
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .introduction {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+  }
+  
+  .introduction p {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .finishTypes {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+  }
+  
+  .finishTypes h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .finishToggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .finishButton {
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--primary);
+    border-radius: 2rem;
+    background: transparent;
+    color: var(--primary);
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .finishButton:hover {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .finishButton.active {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .finishFeatures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .checkmark {
+    color: var(--primary);
+    font-weight: bold;
+  }
+  
+  .pricingTableContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .pricingTable {
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tableHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .tableRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    animation: slideIn 0.5s ease-out forwards;
+    transition: all 0.3s ease;
+  }
+  
+  .tableRow:hover {
+    background: #f8f9fa;
+    transform: scale(1.01);
+  }
+  
+  .price {
+    color: var(--primary-dark);
+    font-weight: bold;
+  }
+  
+  .ctaSection {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .ctaSection p {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Tablet Responsiveness */
+  @media (max-width: 768px) {
+    .introduction p {
+      font-size: 1rem;
+    }
+  
+    .finishTypes h2 {
+      font-size: 1.5rem;
+    }
+  
+    .finishButton {
+      padding: 0.625rem 1.5rem;
+      font-size: 1rem;
+    }
+  
+    .finishFeatures {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .section {
+      padding-top: 1.5rem;
+      padding-bottom: 3rem;
+    }
+  
+    .tableHeader, .tableRow {
+      font-size: 0.875rem;
+      padding: 0.75rem;
+    }
+  
+    .finishToggle {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .ctaButton {
+      padding: 0.875rem 1.75rem;
+      font-size: 0.875rem;
+    }
+  
+    .ctaSection {
+      margin-top: 3rem;
+    }
+  }

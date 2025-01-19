@@ -1,0 +1,150 @@
+.main {
+    margin-top: 4rem;
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  
+  .section {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section h1 {
+    color: var(--primary-dark);
+    text-align: center;
+  }
+  
+
+  
+  .content > p {
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.125rem;
+  }
+  
+  .policySection {
+    margin-bottom: 3rem;
+    font-family: var(--font-lato), sans-serif;
+  }
+  
+  .policySection:last-child {
+    margin-bottom: 0;
+  }
+  
+  .policySection h2 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .policySection p {
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1.125rem;
+  }
+  
+  .policySection ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .policySection li {
+    color: #333;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    font-size: 1.125rem;
+  }
+  .policySection h2 {
+    margin-bottom: 0.25rem;
+  }
+  
+  .contactInfo {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .contactInfo p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contactInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .contactInfo a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contactInfo a:hover {
+    color: var(--primary-dark);
+  }
+  
+  /* Tablet Responsiveness */
+  @media (max-width: 768px) {
+    .section {
+      padding: 3rem 0;
+    }
+  
+    .content {
+      padding: 0 1.5rem;
+    }
+  
+    .content > p,
+    .policySection p,
+    .policySection li {
+      font-size: 1rem;
+    }
+  
+    .policySection h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  
+    .policySection {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .section {
+      padding: 2.5rem 0;
+    }
+  
+    .content {
+      padding: 0 1rem;
+    }
+  
+    .section h1 {
+      margin-bottom: 1.5rem;
+    }
+  
+    .policySection {
+      margin-bottom: 1.5rem;
+    }
+  
+    .contactInfo {
+      padding: 1rem;
+    }
+  }

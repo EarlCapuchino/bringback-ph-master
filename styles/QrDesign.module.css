@@ -1,0 +1,227 @@
+.qrDesignContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.contentWrapper {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  justify-content: space-between;
+   align-items: flex-start; /*align item in flexbox*/
+}
+
+.qrOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40%;
+  align-items: flex-start;
+
+}
+  .groupTitle {
+      color: var(--primary-dark);
+      font-size: 1.25rem;
+       margin-bottom: 1rem;
+  }
+  .optionGroup {
+   display: flex;
+     flex-direction: column;
+       margin-bottom: 0.5rem;
+   }
+
+
+  .formLabel {
+      font-size: 1rem;
+       font-weight: 500;
+      margin-bottom: 0.25rem;
+       color: #555;
+  }
+  .formInput {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+       border-radius: 0.25rem;
+  font-size: 1rem;
+        width: 100%;
+  }
+
+  .qrPreview {
+        display: flex;
+      flex-direction: column;
+       align-items: center;
+      text-align: center;
+      max-width: 100%;
+       padding: 1rem;
+      border-radius: 0.5rem;
+     position: relative;
+        width: 50%;
+     min-width: 300px;
+  }
+.qrPreview.stickyPane {
+    position: sticky;
+    top: 50%; /* Set the top position */
+    transform: translateY(-50%);
+    align-self: center;
+}
+   .frame {
+      display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+       padding: 10px;
+       position: relative;
+  }
+
+ .frameText {
+      margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+     white-space: pre-line;
+ }
+  .previewUrl {
+   font-size: 1.5rem;
+      font-weight: bold;
+     color: var(--primary-dark);
+        margin-bottom: 1rem;
+        word-break: break-all;
+      text-align: center;
+     padding-bottom: 10px;
+      margin-top: 1rem;
+
+ }
+/*Modal*/
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+    opacity: 1;
+  transition: opacity 0.3s ease;
+ pointer-events: auto;
+}
+
+  .modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  .modalFrame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+       justify-content: center;
+  }
+.modalFrameText {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+  }
+.modalCloseButton {
+   position: absolute;
+  top: 0.5rem;
+    right: 0.5rem;
+      background: none;
+   border: none;
+     cursor: pointer;
+    display: flex;
+     align-items: center;
+  }
+
+  .previewButton {
+    background-color: var(--primary);
+    color: white;
+     padding: 0.75rem 1.5rem;
+      border: none;
+     border-radius: 0.25rem;
+    font-size: 1rem;
+      cursor: pointer;
+     transition: all 0.3s ease;
+  transform-origin: center;
+       margin: 0 auto;
+       margin-top: 1rem;
+    }
+   .previewButton:hover {
+     background-color: var(--primary-dark);
+   transform: scale(1.05);
+   }
+   .errorText{
+    color: red;
+   }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+   .contentWrapper {
+        flex-direction: column;
+       align-items: center;
+   }
+    .qrOptions {
+        width: 80%;
+         align-items: center;
+           margin: 0 auto;
+
+   }
+     .qrPreview {
+         width: 80%;
+          min-width: 0;
+         position: static;
+          transform: translateY(0);
+          align-self: center;
+      }
+
+
+    .qrDesignContainer {
+        padding: 1.5rem;
+    }
+  .previewUrl {
+      font-size: 1.25rem;
+  }
+      .modalContent {
+         padding: 1.5rem;
+          width: 95%;
+      }
+  }
+
+@media (max-width: 480px) {
+
+  .qrDesignContainer {
+    padding: 1rem;
+      }
+  .formLabel,
+  .formInput {
+     font-size: 0.875rem;
+  }
+   .qrPreview {
+       padding: 0.75rem;
+  }
+   .frame {
+      padding: 0.5rem
+   }
+  .previewUrl {
+        font-size: 1rem;
+    }
+   .modalContent {
+        padding: 1rem;
+          width: 95%;
+      }
+      .modalCloseButton {
+           font-size: 0.875rem;
+      }
+}

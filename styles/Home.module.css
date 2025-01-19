@@ -1,0 +1,501 @@
+.main {
+  margin-top: 4rem;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+
+/* ADS SECTION */
+.ads_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.ads_container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.marquee_ads {
+  width: 100%;
+}
+
+/* WHAT SECTION */
+
+.what_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+   opacity: 0;
+      transform: translateY(20px);
+     transition: all 0.5s ease;
+  }
+  .what_section.animate {
+  opacity: 1;
+      transform: translateY(0);
+}
+
+
+.what_content {
+   max-width: 600px;
+   padding: 0 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.what_header {
+   margin-bottom: 1.5rem;
+}
+
+.what_paragraph {
+  line-height: 1.8;
+    text-align: center;
+}
+
+.what_image {
+  width: 100%;
+   max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 2rem 0;
+
+}
+.stickerImage {
+  width: 100%;
+  height: auto;
+}
+
+/* HOW SECTION */
+.how_section {
+  padding: 4rem 1rem; /* Increased padding for PC */
+      opacity: 0;
+      transform: translateY(20px);
+     transition: all 0.5s ease;
+}
+.how_section.animate {
+   opacity: 1;
+      transform: translateY(0);
+}
+
+
+  .how_header {
+      text-align: center;
+       margin-bottom: 3rem;
+  }
+
+.how_steps {
+   max-width: 900px; /* increased max width */
+   margin: 0 auto;
+}
+
+.how_step {
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3rem;
+   position: relative;
+   padding: 1rem;
+   transition: background-color 0.3s ease;
+}
+
+.how_step:hover {
+    background-color: #f0f0f0;
+}
+.stepImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 80px;
+    height: 80px;
+  margin-right: 2rem;
+   position: relative;
+
+}
+.stepImage {
+  width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+  .stepImageWrapper::before {
+      content: attr(data-step-number);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       width: 40px;
+       height: 40px;
+      background-color: white;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.1rem;
+
+  }
+.stepContent {
+  flex: 1;
+}
+
+  .stepTitle {
+      color: var(--primary-dark);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+  }
+
+ .stepDescription {
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+     font-size: 1rem;
+  }
+
+  .progressBar {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 5px;
+      background-color: var(--primary);
+      transition: width 0.5s ease;
+     width: 100%; /* added this to always show bar */
+  }
+
+  .orderButtonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+       margin-bottom: 3rem;
+  }
+  .orderButton {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform-origin: center;
+  }
+
+  .orderButton:hover {
+  background-color: var(--primary-dark);
+      transform: scale(1.05);
+  }
+
+
+  /* TESTIMONIAL SECTION */
+
+.testimonial_section {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    background-color: #f9f9f9;
+}
+ .testimonial_header {
+      text-align: center;
+     margin-bottom: 3rem;
+   }
+
+.testimonial_carousel {
+    display: flex;
+    overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+   max-width: 900px;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+     scrollbar-width: none;
+    -ms-overflow-style: none;
+      scroll-behavior: smooth;
+}
+
+ .testimonial_carousel::-webkit-scrollbar {
+       display: none;
+  }
+
+.testimonial_card {
+  flex: 0 0 100%;
+  padding: 2rem;
+  scroll-snap-align: start;
+     opacity: 0.7;
+    transition: all 0.3s ease;
+      display: flex;
+        align-items: center;
+        justify-content: space-between;
+      background-color: white;
+       box-shadow: none; /* Removed blur from cards */
+
+}
+.testimonial_card.active {
+      opacity: 1;
+}
+.testimonial_content {
+      flex: 1;
+     padding-right: 1rem;
+}
+.review {
+  font-size: 1.35rem; /* Larger text for quotes */
+   font-style: italic;
+  line-height: 1.6;
+   text-align: left;
+    margin-bottom: 1rem;
+
+}
+ .testifier_name {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: left;
+  }
+
+.rating {
+      color: var(--primary);
+      font-size: 1.125rem;
+      text-align: left;
+  }
+
+  .star {
+  margin-right: 0.2rem;
+  }
+
+
+.testimonial_image {
+    display: flex;
+     align-items: center;
+    justify-content: center;
+  min-width: 150px; /* Increased image size */
+  height: 150px; /* Increased image size */
+       overflow: hidden;
+
+}
+.testifier_image {
+  width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+  .testimonial_controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+  }
+  .arrowButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+       margin: 0 1rem;
+  }
+
+  .progressContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .progressDot {
+       display: block;
+       width: 10px;
+       height: 10px;
+      border-radius: 50%;
+      background-color: #ddd;
+       margin: 0 0.5rem;
+     transition: all 0.3s ease;
+
+  }
+  .progressDot.activeDot {
+        background-color: transparent;
+        border: 2px solid var(--primary);
+  }
+
+
+
+/*Responsive Design */
+@media (max-width: 768px) {
+  .testimonial_section {
+       padding: 2rem 1rem;
+  }
+  .testimonial_carousel {
+        max-width: 95%;
+         padding-bottom: 1rem;
+  }
+   .testimonial_card {
+          flex-direction: column;
+           padding: 1.5rem;
+      }
+      .testimonial_content {
+         padding-right: 0;
+            margin-bottom: 1rem;
+      }
+      .review {
+          font-size: 1.125rem;
+           margin-bottom: 0.5rem;
+         }
+       .testifier_name {
+          font-size: 0.9rem;
+        }
+        .rating {
+            font-size: 1rem;
+        }
+         .testimonial_image {
+              min-width: 100px;
+              height: 100px;
+          }
+}
+
+@media (max-width: 480px) {
+
+ .testimonial_carousel {
+        max-width: 100%;
+
+     }
+     .testimonial_card {
+       padding: 1rem;
+      }
+      .review {
+          font-size: 1rem;
+        }
+          .testifier_name {
+              font-size: 0.875rem;
+          }
+       .rating {
+           font-size: 0.875rem;
+       }
+        .progressDot {
+          width: 8px;
+           height: 8px;
+           margin: 0 0.3rem;
+       }
+       .testimonial_image {
+              min-width: 80px;
+              height: 80px;
+          }
+}
+
+  /* Existing Styles... */
+     /* MATERIALS SECTION */
+
+     .materials_section {
+      padding: 4rem 1rem;
+         opacity: 0;
+          transform: translateY(20px);
+         transition: all 0.5s ease;
+  
+    }
+       .materials_section.animate {
+        opacity: 1;
+          transform: translateY(0);
+    }
+  
+      .materials_header {
+           text-align: center;
+          margin-bottom: 1rem;
+      }
+      .materials_paragraph {
+           text-align: center;
+          margin-bottom: 3rem;
+         max-width: 800px;
+           margin-left: auto;
+           margin-right: auto;
+      }
+  
+      .materials_grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+           max-width: 1100px;
+           margin: 0 auto;
+      }
+      .material_card {
+            background-color: white;
+           border-radius: 1rem;
+          padding: 2rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+        .material_card:hover {
+          transform: translateY(-5px);
+           box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+      }
+      .material_icon {
+           display: flex;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+           color: var(--primary);
+      }
+     .material_title {
+          color: var(--primary-dark);
+         font-size: 1.25rem;
+          margin-bottom: 1rem;
+           text-align: center;
+     }
+    .material_features {
+          list-style-type: none;
+          padding: 0;
+      }
+     .material_features li {
+          color: #333;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 0.5rem;
+             padding-left: 1rem;
+           position: relative;
+      }
+      .material_features li::before {
+            content: "•";
+             color: var(--primary);
+            position: absolute;
+             left: 0;
+  
+        }
+   /*Responsive Design */
+  @media (max-width: 768px) {
+  
+       .materials_grid {
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax value for smaller screens */
+           gap: 1.5rem;
+       }
+      .material_card {
+             padding: 1.5rem;
+      }
+         .material_title {
+            font-size: 1.125rem;
+        }
+  
+     .material_features li {
+            font-size: 0.9rem;
+     }
+  
+  }
+  
+  @media (max-width: 480px) {
+       .materials_grid {
+           grid-template-columns: 1fr;
+             gap: 1.25rem;
+       }
+         .material_card {
+            padding: 1.25rem;
+      }
+       .material_title {
+            font-size: 1rem;
+        }
+         .material_features li {
+             font-size: 0.875rem;
+         }
+  }

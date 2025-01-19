@@ -1,0 +1,108 @@
+/* MarqueeAds.module.css */
+.marqueeWrapper {
+    width: 100vw;
+    height: 90px;
+    background-color: var(--primary-dark);
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee {
+    display: flex;
+    width: max-content;
+    animation: scroll 100s linear infinite; /* Slowed down animation */
+    height: 100%;
+    align-items: center;
+  }
+  
+  .marqueeGroup {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .marqueeItem {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem; /* Increased padding */
+    white-space: nowrap;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+  }
+  
+  .marqueeItem:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: 1rem;
+    color: var(--light);
+    opacity: 0.5;
+    font-size: 1.2rem; /* Larger dot separator */
+  }
+  
+  .imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem; /* Increased spacing */
+  }
+  
+  .icon {
+    width: 32px; /* Larger icons */
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+  
+  .text {
+    font-family: var(--font-roboto);
+    font-size: 1.50rem; /* Larger text */
+    font-weight: 500;
+    color: var(--light);
+    letter-spacing: 0.02em;
+  }
+  
+  /* Hover effect */
+  .marqueeItem:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Scroll animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.33%); /* Adjusted for three groups */
+    }
+  }
+  
+  /* Pause on hover (optional) */
+  .marqueeWrapper:hover .marquee {
+    animation-play-state: paused;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .marqueeWrapper {
+      height: 80px; /* Slightly smaller on mobile */
+    }
+    
+    .icon {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .text {
+      font-size: 1rem;
+    }
+    
+    .marqueeItem {
+      padding: 0 2rem;
+    }
+  }

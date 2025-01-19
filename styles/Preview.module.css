@@ -1,0 +1,143 @@
+.previewPage {
+    background-color: #fff;
+     padding: 2rem;
+      border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    max-width: 100%;
+       transition: all 0.3s ease;
+       word-wrap: break-word;
+  }
+
+    .deviceSelector {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+      .deviceButton {
+         background: none;
+          border: none;
+       cursor: pointer;
+     font-size: 1rem;
+        color: #aaa;
+          transition: all 0.3s ease;
+
+       }
+
+       .deviceButton:hover,
+      .deviceButton.active {
+         color: var(--primary)
+     }
+      .mobilePrompt {
+       font-size: 0.75rem;
+        color: #999
+    }
+
+    .previewItem {
+       margin-bottom: 1.5rem;
+
+    }
+   .attribute {
+       color: var(--primary-dark);
+       font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    }
+
+    .textValue {
+        font-size: 1rem;
+    line-height: 1.6;
+        color: #333;
+          white-space: pre-line; /* maintain paddings in text input */
+
+    }
+
+  .imageContainer {
+         margin-top: 0.5rem;
+         display: flex;
+       justify-content: center;
+        border: 1px solid #eee;
+          border-radius: 0.5rem;
+        max-width: 100%;
+        overflow: hidden;
+  }
+    .previewImage {
+         width: 100%;
+         height: auto;
+      object-fit: contain;
+  }
+    .linkValue {
+        color: var(--primary);
+        font-size: 1rem;
+        text-decoration: underline;
+          line-height: 1.6;
+    }
+
+  .pdfContainer {
+       margin-top: 0.5rem;
+     border: 1px solid #eee;
+     border-radius: 0.5rem;
+    max-width: 100%;
+        overflow: hidden;
+    display: flex;
+    justify-content: center;
+    }
+      .pdfFrame {
+        width: 100%;
+        height: 400px;
+          border: none;
+   }
+
+
+    .device-phone {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .device-tablet {
+       max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+  }
+
+     .device-pc {
+       max-width: 1024px;
+       margin-left: auto;
+       margin-right: auto;
+     }
+ /* Responsive Design */
+@media (max-width: 768px) {
+
+     .previewPage {
+            padding: 1.5rem;
+      }
+      .attribute {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+      .textValue,
+       .linkValue {
+            font-size: 0.875rem;
+        }
+
+    .pdfFrame {
+            height: 300px;
+        }
+}
+@media (max-width: 480px) {
+    .previewPage {
+            padding: 1rem;
+        }
+    .attribute {
+        font-size: 0.875rem;
+        margin-bottom: 0.125rem;
+      }
+      .textValue,
+        .linkValue {
+            font-size: 0.75rem;
+       }
+
+       .pdfFrame {
+          height: 200px;
+       }
+ }

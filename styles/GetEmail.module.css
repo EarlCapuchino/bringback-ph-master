@@ -1,0 +1,147 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    font-family: var(--font-lato), sans-serif;
+  }
+  
+  .modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form h2 {
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  .input.invalid {
+    border-color: #ff4444;
+  }
+  
+  .errorText {
+    color: #ff4444;
+    font-size: 0.875rem;
+  }
+  
+  .submitButton, .okButton {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover, .okButton:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .submitButton.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .responseContainer {
+    text-align: center;
+  }
+  
+  .responseContainer h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .modal {
+      padding: 1.5rem;
+    }
+  
+    .form h2, .responseContainer h2 {
+      font-size: 1.125rem;
+    }
+  
+    .input {
+      padding: 0.625rem 0.875rem;
+    }
+  
+    .submitButton, .okButton {
+      padding: 0.625rem 1.25rem;
+    }
+  }

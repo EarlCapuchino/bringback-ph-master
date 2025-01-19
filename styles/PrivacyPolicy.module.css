@@ -1,0 +1,163 @@
+.main {
+    margin-top: 4rem;
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-family: var(--font-lato), sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+  
+  .document {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 0.5rem;
+  
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    font-family: var(--font-roboto), sans-serif;
+  }
+  
+  .header h1 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .companyInfo {
+    color: #666;
+  }
+  
+  .companyInfo h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+  }
+  
+  .companyInfo p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+  }
+  
+  .companyInfo a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .companyInfo a:hover {
+    color: var(--primary-dark);
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+  .section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .section h3 {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .section p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+    .section ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .section li {
+        color: #444;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+  
+  /* Tablet Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem 1rem;
+    }
+  
+    .document {
+      padding: 2rem;
+    }
+  
+    .header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  
+    .header h1 {
+      font-size: 1.75rem;
+    }
+  
+    .companyInfo h2 {
+      font-size: 1.1rem;
+    }
+  
+    .section {
+      margin-bottom: 1.5rem;
+    }
+  
+    .section h3 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .container {
+      padding: 1rem 0.5rem;
+    }
+  
+    .document {
+      padding: 1.5rem;
+      border-radius: 0;
+    }
+  
+    .header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+    }
+  
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section {
+      margin-bottom: 1.25rem;
+    }
+  
+    .section h3 {
+      font-size: 1rem;
+    }
+  
+    .section p,
+    .section li {
+      font-size: 0.95rem;
+    }
+  }

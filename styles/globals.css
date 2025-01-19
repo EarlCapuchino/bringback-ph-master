@@ -1,0 +1,102 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Define font variables */
+:root {
+  --font-lato: 'Lato', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  
+  --primary-dark: #03045E;
+  --primary: #0077B6;
+  --secondary: #90E0EF;
+  --light: #CAF0F8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-roboto), sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.txt-title {
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+
+.txt-content {
+  font-family: var(--font-lato), sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.txt-subcontent {
+  font-family: var(--font-lato), sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.main-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.sub-btn {
+  background-color: var(--light);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sub-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .txt-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .txt-title {
+    font-size: 1.75rem;
+  }
+}
