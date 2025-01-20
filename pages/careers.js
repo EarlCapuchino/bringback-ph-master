@@ -40,7 +40,7 @@ export default function Careers() {
                   We're on a hunt for driven and trainable individuals to join and embrace our very humble family—people who are excited to play and pioneer a new service technology in the Philippines!
                 </p>
                 <p>
-                  If you are interested in any of our open positions, please email your resume and cover letter to: bringbackph.careers@gmail.com
+                  If you are interested in any of our open positions, please email your resume and cover letter to: bringbackph@gmail.com
                 </p>
               </div>
 
@@ -156,11 +156,11 @@ export default function Careers() {
 
               <div className={styles.contactInfo}>
                 <h3>How to Apply:</h3>
-                <p>Send your resume, cover letter, and portfolio (if applicable) to bringbackph.careers@gmail.com with the subject line: [Position Title] - [Your Name].</p>
+                <p>Send your resume, cover letter, and portfolio (if applicable) to bringbackph@gmail.com with the subject line: [Position Title] - [Your Name].</p>
                 <p>For inquiries, contact us at:</p>
                 <div className={styles.contactDetails}>
-                  <p><Phone className="inline mr-2" size={18} /> +63 909 950 1899</p>
-                  <p><Mail className="inline mr-2" size={18} /> bringbackph.careers@gmail.com</p>
+                  {/* <p><Phone className="inline mr-2" size={18} /> +63 909 950 1899</p> */}
+                  <p><Mail className="inline mr-2" size={18} /> bringbackph@gmail.com</p>
                 </div>
               </div>
             </div>
