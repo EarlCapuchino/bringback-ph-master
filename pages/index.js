@@ -212,7 +212,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>BringBack PH - QR Code Repository</title>
+                <title>BringBack - Your first QR code repository-and-sticker solution</title>
                 <link rel ="icon" href="/logo.png"/>
                 <meta name="description" content="Your first QR code repository-and-sticker solution" />
                 <Link href="/" className={styles.logo}>
