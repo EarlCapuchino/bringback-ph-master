@@ -38,6 +38,7 @@ export default function Pricing() {
     <>
       <Head>
         <title>Pricing - BringBack PH</title>
+        <link rel ="icon" href="/logo.png"/>
         <meta name="description" content="BringBack PH QR Sticker Pricing" />
       </Head>
       <Header />

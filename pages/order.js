@@ -14,10 +14,6 @@ import Payment from '../components/Payment';
 import GetEmail from '../components/GetEmail';
 
 
-function generateUID() {
-    return Math.random().toString(36).substring(2, 10);
-}
-
 
 export default function Order() {
     const [currentStep, setCurrentStep] = useState(0);
@@ -255,6 +251,7 @@ export default function Order() {
         <>
             <Head>
                 <title>Order - BringBack PH</title>
+                <link rel ="icon" href="/logo.png"/>
                 <meta name="description" content="Order your BringBack sticker" />
                 <Link href="/" className={styles.logo}>
                     <Image src="/logo.png" alt="BringBack PH Logo" width={90} height={90} />

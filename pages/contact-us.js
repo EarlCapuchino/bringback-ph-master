@@ -84,6 +84,7 @@ function ContactUs() {
         <>
             <Head>
                 <title>Contact Us - BringBack PH</title>
+                <link rel ="icon" href="/logo.png"/>
                 <meta name="description" content="Contact BringBack PH" />
                 <Link href="/" className={styles.logo}>
                   <Image src="/logo.png" alt="BringBack PH Logo" width={90} height={90} />

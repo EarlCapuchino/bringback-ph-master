@@ -10,6 +10,7 @@ export default function PrivacyPolicy() {
     <>
       <Head>
         <title>Privacy Policy - BringBack PH</title>
+        <link rel ="icon" href="/logo.png"/>
         <meta name="description" content="BringBack PH Privacy Policy" />
         <Link href="/" className={styles.logo}>
           <Image src="/logo.png" alt="BringBack PH Logo" width={90} height={90} />

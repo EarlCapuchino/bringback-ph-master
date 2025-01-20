@@ -97,6 +97,7 @@ export default function Business() {
     <>
       <Head>
         <title>Business Solutions - BringBack PH</title>
+        <link rel ="icon" href="/logo.png"/>
         <meta name="description" content="Explore BringBack PH's Business Solutions" />
         <Link href="/" className={styles.logo}>
           <Image src="/logo.png" alt="BringBack PH Logo" width={90} height={90} />

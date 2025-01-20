@@ -68,6 +68,7 @@ export default function QrTechnology() {
     <>
       <Head>
         <title>QR Technology - BringBack PH</title>
+        <link rel ="icon" href="/logo.png"/>
         <meta name="description" content="Learn about BringBack PH's QR code data repository technology" />
         <Link href="/" className={styles.logo}>
           <Image src="/logo.png" alt="BringBack PH Logo" width={90} height={90} />

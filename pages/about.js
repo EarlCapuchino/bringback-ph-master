@@ -17,6 +17,7 @@ export default function About() {
     <>
       <Head>
         <title>About - BringBack PH</title>
+        <link rel ="icon" href="/logo.png"/>
         <meta name="description" content="Learn about BringBack PH's mission and story" />
         <Link href="/" className={styles.logo}>
           <Image src="/logo.png" alt="BringBack PH Logo" width={90} height={90} />
