@@ -43,6 +43,10 @@ export default function Home() {
         triggerOnce: true,
         threshold: 0.1,
     });
+    const { ref: materialRef, inView: materialInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
 
     const howSteps = [
         {
@@ -237,7 +241,7 @@ export default function Home() {
                             If your item is ever lost, finders can easily scan the QR code to notify you and arrange for its return.
                         </p>
                     </div>
-                    <div className={styles.what_image}>
+                    {/* <div className={styles.what_image}>
                       <Image
                             src="/sticker_1.png"
                             alt="BringBack Sticker"
@@ -245,7 +249,7 @@ export default function Home() {
                             height={500}
                             className={styles.stickerImage}
                         />
-                    </div>
+                    </div> */}
                 </section>
 
                 {/* How Section */}
@@ -319,7 +323,7 @@ export default function Home() {
                                       ))}
                                   </div>
                                 </div>
-                                    <div className={styles.testimonial_image}>
+                                    {/* <div className={styles.testimonial_image}>
                                         <Image
                                               src={`/${testi.image}`}
                                               alt={testi.name}
@@ -327,7 +331,7 @@ export default function Home() {
                                                 height={150}
                                                 className={styles.testifier_image}
                                             />
-                                      </div>
+                                      </div> */}
 
                                 </div>
 
@@ -354,7 +358,7 @@ export default function Home() {
                 </section>
 
                 {/* Materials Section */}
-                <section className={`${styles.materials_section} ${howInView ? styles.animate : ''}`} ref={howRef}>
+                <section className={`${styles.materials_section} ${materialInView ? styles.animate : ''}`} ref={materialRef}>
                         <h2 className={`${styles.materials_header} txt-title`}>Our Proprietary Material</h2>
                         <p className={`${styles.materials_paragraph} txt-content`}>
                              BringBack’s proprietary QR sticker technology is crafted to meet the standards of durability.

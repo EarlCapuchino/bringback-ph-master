@@ -40,7 +40,7 @@ export default function About() {
               </p>
             </div>
           </section>
-          <Carousel images={carouselImages} />
+          {/* <Carousel images={carouselImages} /> */}
           <section className={styles.section}>
             <h2 className="txt-title">Story</h2>
             <div className={styles.content}>
