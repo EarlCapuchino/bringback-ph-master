@@ -1,4 +1,4 @@
-# BringBack PH Project Showcase
+# BringBack PH Project
 
 This document provides an overview of my work on the BringBack PH project, along with examples of code snippets that illustrate some of the implementation techniques used. Due to client confidentiality agreements, I cannot share the full project repositories, including commit history or related backend logic.
 
