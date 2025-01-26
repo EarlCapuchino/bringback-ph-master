@@ -1,4 +1,4 @@
-# BringBack PH
+# BringBack PH Project Showcase
 
 This document provides an overview of my work on the BringBack PH project, along with examples of code snippets that illustrate some of the implementation techniques used. Due to client confidentiality agreements, I cannot share the full project repositories, including commit history or related backend logic.
 
@@ -90,7 +90,7 @@ The following code snippets showcase some of the implementation techniques used 
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length === 0) {
-        alert('Form submitted successfully!');
+         alert('Form submitted successfully!');
         }
      };
 
@@ -103,19 +103,19 @@ The following code snippets showcase some of the implementation techniques used 
             value={formData.name}
             onChange={handleChange}
            />
-         {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
-        <input
+          {errors.name ? <span style={{ color: 'red' }}>{errors.name}</span> : null}
+          <input
            type="email"
            name="email"
            placeholder="Email"
            value={formData.email}
            onChange={handleChange}
           />
-        {errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}
-        <button type="submit">Submit</button>
-      </form>
-     );
-   }
+          {errors.email ? <span style={{ color: 'red' }}>{errors.email}</span> : null}
+          <button type="submit">Submit</button>
+        </form>
+      );
+    }
     export default ValidatedForm;
     ```
 
